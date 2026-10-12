@@ -9,7 +9,8 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 python main.py
- FuncionalidadesEtapa 1: Carregamento dos dados do CSV
+ Funcionalidades
+Etapa 1: Carregamento dos dados do CSV
 Etapa2: Resumo com total de votos
 Etapa 3: Amostra das 10 primeiras linhas
 Etapa 4: Votos agrupados por partido
