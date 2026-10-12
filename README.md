@@ -1,4 +1,4 @@
-#  Projeto Eleições 2024 - SP
+#  Projeto Eleições 2024 - BR
 Projeto desenvolvido na aula de 12/10/26 para análise de dados de eleições municipais de Santa Catarina.
 
 <img width="736" height="282" alt="image" src="https://github.com/user-attachments/assets/81abadc2-fcb4-4250-a231-00481152c6d0" />
