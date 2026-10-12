@@ -1,24 +1,25 @@
-"""Etapa 2: mostrar um quadro com os totais gerais."""
-from rich.panel import Panel
-from etapa1_carregar import carregar_dados
-from formatacao import console, numero_br
+import pandas as pd
 
-def mostrar_resumo(df):
-    total_registros = len(df)
-    total_votos = df["votos"].sum()
-    total_cidades = df["cidade"].nunique()
-    total_candidatos = df["candidato"].nunique()
-    total_partidos = df["partido"].nunique() # <-- NOVO
+def gerar_resumo():
+    # antes era: df
+    dados_eleitorais = pd.read_csv("dados/eleicoes.csv")
 
-    texto = (
-        f"[bold]Registros:[/] {numero_br(total_registros)} "
-        f"[bold]Votos:[/] {numero_br(total_votos)} "
-        f"[bold]Cidades:[/] {total_cidades} "
-        f"[bold]Candidatos:[/] {total_candidatos} "
-        f"[bold]Partidos:[/] {total_partidos}" # <-- NOVO
+    # antes eram: total_registros, total_votos, etc
+    quantidade_registros = len(dados_eleitorais)
+    soma_votos = dados_eleitorais['votos'].sum()
+    numero_municipios = dados_eleitorais['cidade'].nunique()
+    quantidade_candidatos = dados_eleitorais['candidato'].nunique()
+
+    # antes era: texto
+    mensagem_resumo = (
+        f"Registros: {quantidade_registros} "
+        f"Votos: {soma_votos:,.0f} "
+        f"Cidades: {numero_municipios} "
+        f"Candidatos: {quantidade_candidatos}"
     )
-    console.print(Panel(texto, title="Eleições 2024 (dados fictícios)", expand=False))
+    
+    print(mensagem_resumo)
+    return mensagem_resumo
 
 if __name__ == "__main__":
-    df = carregar_dados()
-    mostrar_resumo(df)
+    gerar_resumo()
