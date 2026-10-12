@@ -17,7 +17,7 @@ Etapa 4: Votos agrupados por partido
 Etapa 5: Prefeitos eleitos por município (maior votação)
 Etapa 6: Exportação do resultado finalDesafio
  Extra: Arquivo votos_partido.csv com totais por partido
- TecnologiasPython 3PandasGit / GitHubFeito por Erenice Santos
+ Tecnologias: Python 3PandasGit / GitHub Feito por Erenice Santos
 Depois de colar, salva `CTRL + S` e manda pro GitHub:
 ```powershell
 git add README.md
